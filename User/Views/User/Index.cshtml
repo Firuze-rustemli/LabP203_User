@@ -1,0 +1,92 @@
+﻿@using User.Models;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+<div class="account">
+    <div class="container">
+        <div class="account-bottom">
+
+            @*<div class="col-md-6 account-left">
+                @if (Session["added"] != null) {
+                    
+                    <p>@Session["added"]</p>{
+                        Session.Clear();
+                    }
+                }
+                else
+                {
+                    <p>@Session["error"]</p>{
+                        Session.Clear();
+                    }
+                }
+
+                <form method="post" action="@Url.Action("Register","User")">
+                    <div class="account-top heading">
+                        <h3>NEW CUSTOMERS</h3>
+                    </div>
+                    <div class="address">
+                        <span>First Name</span>
+                        <input type="text" name="Firstname" placeholder="Firstname">
+                    </div>
+                    <div class="address">
+                        <span>Last Name</span>
+                        <input type="text" name="Lastname" placeholder="Lastname">
+                    </div>
+                    <div class="address">
+                        <span>Email Address</span>
+                        <input type="email" name="Email" placeholder="Email">
+                    </div>
+                    <div class="address">
+                        <span>Password</span>
+                        <input type="password" name="Password" placeholder="Password">
+                    </div>
+                    <div class="address">
+                        <span>Re-enter Password</span>
+                        <input type="password" name="Confirm" placeholder="Confirm Password">
+                    </div>
+                    <div class="address new">
+                        <input type="submit" value="submit">
+                    </div>
+                </form>
+            </div>*@
+
+            <div class="col-md-6 account-left second">
+                @if (Session["Msj"] != null)
+                {
+
+                    <p>@Session["Msj"]</p>{
+                        Session.Clear();
+                    }
+                }
+                else
+                {
+                    <p>@Session["Error"]</p>{
+                        Session.Clear();
+                    }
+                }
+                <form method="Post" action="@Url.Action("Login","User")">
+                    <div class="account-top heading">
+                        <h3>REGISTERED CUSTOMERS</h3>
+                    </div>
+                    <div class="address">
+                        <span>Email Address</span>
+                        <input type="email" name="Email" placeholder="Email">
+                    </div>
+                    <div class="address">
+                        <span>Password</span>
+                        <input type="password" name="Password" placeholder="Password">
+                    </div>
+                    <div class="address">
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
